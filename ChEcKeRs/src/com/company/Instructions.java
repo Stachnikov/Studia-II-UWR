@@ -34,8 +34,6 @@ public class Instructions extends JFrame{
 
         Next next = new Next();
         go.addActionListener(next);
-        //add(pic);
-        //add(go);
         add(box);
         setResizable(false);
         setVisible(true);
