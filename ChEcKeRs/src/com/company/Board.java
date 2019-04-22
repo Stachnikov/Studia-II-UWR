@@ -82,7 +82,7 @@ public class Board extends JPanel{
                 if ((x + y) % 2 != 0) {
                 } else {
 
-                    switch (Pionki[y][x].getBoard()/*board[y][x]*/) {
+                    switch (Pionki[y][x].getBoard()) {
                         case 1: {
                             g.setColor(new Color(170, 0, 0));
                             g.fillOval(x * 80 + 5, y * 80 + 5, 68, 68);
@@ -101,9 +101,9 @@ public class Board extends JPanel{
 
                         case 3: {
                             g.setColor(Color.BLACK);
-                            if(Pionki[y][x].getAttackmove()/*attackmove[y][x]*/ == 1)
+                            if(Pionki[y][x].getAttackmove() == 1)
                                 g.setColor(new Color(113,221,183));
-                            if(Pionki[y][x].getAttackmove()/*attackmove[y][x]*/ == 2)
+                            if(Pionki[y][x].getAttackmove() == 2)
                                 g.setColor(new Color(222,222,38));
                             g.fillRect(x*80,y*80, size,size);
                             break;
@@ -166,117 +166,117 @@ public class Board extends JPanel{
 
     public void move1(int x, int y){
         mademove1=false;
-        if(Pionki[y][x].getBoard()/*board[y][x]*/ == 1){
+        if(Pionki[y][x].getBoard() == 1){
             cleanHighlight();
 
-            Pionki[y][x].setAttackmove(11);/*attackmove[y][x] = 11;*/
+            Pionki[y][x].setAttackmove(11);
             if (y + 1 <= 7) {
-                if (x + 1 <= 7 && Pionki[y+1][x+1].getBoard()/*board[y+1][x+1]*/ == 3)
-                    Pionki[y + 1][x + 1].setAttackmove(1);/*attackmove[y + 1][x + 1] = 1;*/
-                if (x - 1 >= 0 && Pionki[y + 1][x - 1].getBoard()/*board[y+1][x-1]*/ == 3)
-                    Pionki[y + 1][x - 1].setAttackmove(1);/*attackmove[y + 1][x - 1] = 1;*/
+                if (x + 1 <= 7 && Pionki[y+1][x+1].getBoard() == 3)
+                    Pionki[y + 1][x + 1].setAttackmove(1);
+                if (x - 1 >= 0 && Pionki[y + 1][x - 1].getBoard() == 3)
+                    Pionki[y + 1][x - 1].setAttackmove(1);
             }
 
             if(y+2 <=7){
-                if ( x+2 <=7 && Pionki[y+2][x+2].getBoard()/*board[y+2][x+2]*/ == 3 && (Pionki[y+1][x+1].getBoard()/*board[y+1][x+1]*/ == 2 || Pionki[y+1][x+1].getBoard()/*board[y+1][x+1]*/ == 222)) {
-                    Pionki[y + 2][x + 2].setAttackmove(1);/*attackmove[y + 2][x + 2] = 1;*/
-                    Pionki[y + 1][x + 1].setAttackmove(55);/*attackmove[y + 1][x+1] = 55;*/
+                if ( x+2 <=7 && Pionki[y+2][x+2].getBoard() == 3 && (Pionki[y+1][x+1].getBoard() == 2 || Pionki[y+1][x+1].getBoard() == 222)) {
+                    Pionki[y + 2][x + 2].setAttackmove(1);
+                    Pionki[y + 1][x + 1].setAttackmove(55);
                 }
-                if (x-2 >=0 && Pionki[y+2][x-2].getBoard()/*board[y+2][x-2]*/ == 3 && (Pionki[y+1][x-1].getBoard()/*board[y+1][x-1]*/ == 2 || Pionki[y+1][x-1].getBoard()/*board[y+1][x-1]*/ == 222)) {
-                    Pionki[y+2][x-2].setAttackmove(1);/*attackmove[y + 2][x - 2] = 1;*/
-                    Pionki[y+1][x-1].setAttackmove(55);/*attackmove[y + 1][x - 1] = 55;*/
+                if (x-2 >=0 && Pionki[y+2][x-2].getBoard() == 3 && (Pionki[y+1][x-1].getBoard() == 2 || Pionki[y+1][x-1].getBoard() == 222)) {
+                    Pionki[y+2][x-2].setAttackmove(1);
+                    Pionki[y+1][x-1].setAttackmove(55);
                 }
             }
         }
         else if(Pionki[y][x].getBoard() == 111){
             cleanHighlight();
 
-            Pionki[y][x].setAttackmove(111);/*attackmove[y][x] = 11;*/
+            Pionki[y][x].setAttackmove(111);
             if (y + 1 <= 7) {
-                if (x + 1 <= 7 && Pionki[y+1][x+1].getBoard()/*board[y+1][x+1]*/ == 3)
-                    Pionki[y + 1][x + 1].setAttackmove(1);/*attackmove[y + 1][x + 1] = 1;*/
-                if (x - 1 >= 0 && Pionki[y + 1][x - 1].getBoard()/*board[y+1][x-1]*/ == 3)
-                    Pionki[y + 1][x - 1].setAttackmove(1);/*attackmove[y + 1][x - 1] = 1;*/
+                if (x + 1 <= 7 && Pionki[y+1][x+1].getBoard() == 3)
+                    Pionki[y + 1][x + 1].setAttackmove(1);
+                if (x - 1 >= 0 && Pionki[y + 1][x - 1].getBoard() == 3)
+                    Pionki[y + 1][x - 1].setAttackmove(1);
             }
 
             if(y-1>=0){
-                if ( x+1 <=7 && Pionki[y-1][x+1].getBoard()/*board[y-1][x+1]*/ == 3)
-                    Pionki[y-1][x+1].setAttackmove(1);/*attackmove[y-1][x+1] = 2;*/
-                if (x-1 >=0 && Pionki[y-1][x-1].getBoard()/*board[y-1][x-1]*/ == 3)
-                    Pionki[y-1][x-1].setAttackmove(1);/*attackmove[y-1][x-1] = 2;*/
+                if ( x+1 <=7 && Pionki[y-1][x+1].getBoard() == 3)
+                    Pionki[y-1][x+1].setAttackmove(1);
+                if (x-1 >=0 && Pionki[y-1][x-1].getBoard() == 3)
+                    Pionki[y-1][x-1].setAttackmove(1);
             }
 
             if(y-2 >=0){
-                if ( x+2 <=7 && Pionki[y-2][x+2].getBoard()/*board[y-2][x+2]*/ == 3 && (Pionki[y-1][x+1].getBoard()/*board[y-1][x+1]*/ == 2 || Pionki[y-1][x+1].getBoard()/*board[y-1][x+1]*/ == 222)) {
-                    Pionki[y-2][x+2].setAttackmove(1);/*attackmove[y - 2][x + 2] = 2;*/
-                    Pionki[y-1][x+1].setAttackmove(55);/*attackmove[y - 1][x+1] = 44;*/
+                if ( x+2 <=7 && Pionki[y-2][x+2].getBoard() == 3 && (Pionki[y-1][x+1].getBoard() == 2 || Pionki[y-1][x+1].getBoard() == 222)) {
+                    Pionki[y-2][x+2].setAttackmove(1);
+                    Pionki[y-1][x+1].setAttackmove(55);
                 }
-                if (x-2 >=0 && Pionki[y-2][x-2].getBoard()/*board[y-2][x-2]*/ == 3 && (Pionki[y-1][x-1].getBoard()/*board[y-1][x-1]*/ == 2 ||Pionki[y-1][x-1].getBoard()/*board[y-1][x+1]*/ == 222)) {
-                    Pionki[y-2][x-2].setAttackmove(1);/*attackmove[y - 2][x - 2] = 2;*/
-                    Pionki[y-1][x-1].setAttackmove(55);/*attackmove[y - 1][x - 1] = 44;*/
+                if (x-2 >=0 && Pionki[y-2][x-2].getBoard() == 3 && (Pionki[y-1][x-1].getBoard() == 2 ||Pionki[y-1][x-1].getBoard() == 222)) {
+                    Pionki[y-2][x-2].setAttackmove(1);
+                    Pionki[y-1][x-1].setAttackmove(55);
                 }
             }
 
             if(y+2 <=7){
-                if ( x+2 <=7 && Pionki[y+2][x+2].getBoard()/*board[y+2][x+2]*/ == 3 && (Pionki[y+1][x+1].getBoard()/*board[y+1][x+1]*/ == 2 || Pionki[y+1][x+1].getBoard()/*board[y+1][x+1]*/ == 222)) {
-                    Pionki[y + 2][x + 2].setAttackmove(1);/*attackmove[y + 2][x + 2] = 1;*/
-                    Pionki[y + 1][x + 1].setAttackmove(55);/*attackmove[y + 1][x+1] = 55;*/
+                if ( x+2 <=7 && Pionki[y+2][x+2].getBoard() == 3 && (Pionki[y+1][x+1].getBoard() == 2 || Pionki[y+1][x+1].getBoard() == 222)) {
+                    Pionki[y + 2][x + 2].setAttackmove(1);
+                    Pionki[y + 1][x + 1].setAttackmove(55);
                 }
-                if (x-2 >=0 && Pionki[y+2][x-2].getBoard()/*board[y+2][x-2]*/ == 3 && (Pionki[y+1][x-1].getBoard()/*board[y+1][x-1]*/ == 2 || Pionki[y+1][x-1].getBoard()/*board[y+1][x-1]*/ == 222)) {
-                    Pionki[y+2][x-2].setAttackmove(1);/*attackmove[y + 2][x - 2] = 1;*/
-                    Pionki[y+1][x-1].setAttackmove(55);/*attackmove[y + 1][x - 1] = 55;*/
+                if (x-2 >=0 && Pionki[y+2][x-2].getBoard() == 3 && (Pionki[y+1][x-1].getBoard() == 2 || Pionki[y+1][x-1].getBoard() == 222)) {
+                    Pionki[y+2][x-2].setAttackmove(1);
+                    Pionki[y+1][x-1].setAttackmove(55);
                 }
             }
         }
-        else if(Pionki[y][x].getAttackmove()/*attackmove[y][x]*/ == 1){
+        else if(Pionki[y][x].getAttackmove() == 1){
             for(int yy=0; yy<8; yy++)
             for(int xx=0; xx<8; xx++){
-                if(Pionki[yy][xx].getAttackmove()/*attackmove[yy][xx]*/ == 11){
-                    Pionki[y][x].setBoard(1);/*board[y][x]=1;*/
+                if(Pionki[yy][xx].getAttackmove() == 11){
+                    Pionki[y][x].setBoard(1);
                     if(y == 7)
-                        Pionki[y][x].setBoard(111);/*board[y][x]=111;*/
-                    Pionki[yy][xx].setBoard(3);/*board[yy][xx]=3;*/
-                    Pionki[yy][xx].setAttackmove(0);/*attackmove[yy][xx]=0;*/
+                        Pionki[y][x].setBoard(111);
+                    Pionki[yy][xx].setBoard(3);
+                    Pionki[yy][xx].setAttackmove(0);
 
-                    if(y-1 >=0 && x-1 >=0 && Pionki[y-1][x-1].getAttackmove()/*attackmove[y-1][x-1]*/ == 55){
+                    if(y-1 >=0 && x-1 >=0 && Pionki[y-1][x-1].getAttackmove() == 55){
                         left1--;
-                        Pionki[y-1][x-1].setBoard(3);/*board[y-1][x-1] = 3;*/
-                        Pionki[y-1][x-1].setAttackmove(0);/*attackmove[y-1][x-1]=0;*/
-                    }else if(y-1 >=0 && x+1 <=7 && Pionki[y-1][x+1].getAttackmove()/*attackmove[y-1][x+1]*/ == 55){
-                        Pionki[y-1][x+1].setBoard(3);/*board[y-1][x+1] = 3;*/
-                        Pionki[y-1][x+1].setAttackmove(0);/*attackmove[y-1][x+1]=0;*/
+                        Pionki[y-1][x-1].setBoard(3);
+                        Pionki[y-1][x-1].setAttackmove(0);
+                    }else if(y-1 >=0 && x+1 <=7 && Pionki[y-1][x+1].getAttackmove() == 55){
+                        Pionki[y-1][x+1].setBoard(3);
+                        Pionki[y-1][x+1].setAttackmove(0);
                         left1--;
-                    }else if(y+1 <=7 && x-1 >=0 && Pionki[y+1][x-1].getAttackmove()/*attackmove[y+1][x-1]*/ == 55){
-                        Pionki[y+1][x-1].setAttackmove(3);/*board[y+1][x-1] = 3;*/
-                        Pionki[y+1][x-1].setAttackmove(0);/*attackmove[y+1][x-1]=0;*/
+                    }else if(y+1 <=7 && x-1 >=0 && Pionki[y+1][x-1].getAttackmove() == 55){
+                        Pionki[y+1][x-1].setAttackmove(3);
+                        Pionki[y+1][x-1].setAttackmove(0);
                         left1--;
-                    }else if(y+1 <=7 && x+1 <=7 && Pionki[y+1][x+1].getAttackmove()/*attackmove[y+1][x+1]*/ == 55){
-                        Pionki[y+1][x+1].setBoard(3);/*board[y+1][x+1] = 3;*/
-                        Pionki[y+1][x+1].setAttackmove(0);/*attackmove[y+1][x+1]=0;*/
+                    }else if(y+1 <=7 && x+1 <=7 && Pionki[y+1][x+1].getAttackmove() == 55){
+                        Pionki[y+1][x+1].setBoard(3);
+                        Pionki[y+1][x+1].setAttackmove(0);
                         left1--;
                     }
                     mademove1 =true;
                 }
-                if(Pionki[yy][xx].getAttackmove()/*attackmove[yy][xx]*/ == 111){
-                    Pionki[y][x].setBoard(111);/*board[y][x]=1;*/
-                    Pionki[yy][xx].setBoard(3);/*board[yy][xx]=3;*/
-                    Pionki[yy][xx].setAttackmove(0);/*attackmove[yy][xx]=0;*/
+                if(Pionki[yy][xx].getAttackmove() == 111){
+                    Pionki[y][x].setBoard(111);
+                    Pionki[yy][xx].setBoard(3);
+                    Pionki[yy][xx].setAttackmove(0);
 
-                    if(y-1 >=0 && x-1 >=0 && Pionki[y-1][x-1].getAttackmove()/*attackmove[y-1][x-1]*/ == 55){
-                        Pionki[y-1][x-1].setBoard(3);/*board[y-1][x-1] = 3;*/
-                        Pionki[y-1][x-1].setAttackmove(0);/*attackmove[y-1][x-1]=0;*/
+                    if(y-1 >=0 && x-1 >=0 && Pionki[y-1][x-1].getAttackmove() == 55){
+                        Pionki[y-1][x-1].setBoard(3);
+                        Pionki[y-1][x-1].setAttackmove(0);
                         left1--;
-                    }else if(y-1 >=0 && x+1 <=7 && Pionki[y-1][x+1].getAttackmove()/*attackmove[y-1][x+1]*/ == 55){
-                        Pionki[y-1][x+1].setBoard(3);/*board[y-1][x+1] = 3;*/
-                        Pionki[y-1][x+1].setAttackmove(0);/*attackmove[y-1][x+1]=0;*/
+                    }else if(y-1 >=0 && x+1 <=7 && Pionki[y-1][x+1].getAttackmove() == 55){
+                        Pionki[y-1][x+1].setBoard(3);
+                        Pionki[y-1][x+1].setAttackmove(0);
                         left1--;
-                    }else if(y+1 <=7 && x-1 >=0 && Pionki[y+1][x-1].getAttackmove()/*attackmove[y+1][x-1]*/ == 55){
-                        Pionki[y+1][x-1].setBoard(3);/*board[y+1][x-1] = 3;*/
-                        Pionki[y+1][x-1].setAttackmove(0);/*attackmove[y+1][x-1]=0;*/
+                    }else if(y+1 <=7 && x-1 >=0 && Pionki[y+1][x-1].getAttackmove() == 55){
+                        Pionki[y+1][x-1].setBoard(3);
+                        Pionki[y+1][x-1].setAttackmove(0);
                         left1--;
-                    }else if(y+1 <=7 && x+1 <=7 && Pionki[y+1][x+1].getAttackmove()/*attackmove[y+1][x+1]*/ == 55){
-                        Pionki[y+1][x+1].setBoard(3);/*board[y+1][x+1] = 3;*/
-                        Pionki[y+1][x+1].setAttackmove(0);/*attackmove[y+1][x+1]=0;*/
+                    }else if(y+1 <=7 && x+1 <=7 && Pionki[y+1][x+1].getAttackmove() == 55){
+                        Pionki[y+1][x+1].setBoard(3);
+                        Pionki[y+1][x+1].setAttackmove(0);
                         left1--;
                     }
                     mademove1 =true;
@@ -289,117 +289,117 @@ public class Board extends JPanel{
 
     public void move2(int x, int y){
         mademove2=false;
-        if(Pionki[y][x].getBoard()/*board[y][x]*/ == 2){
+        if(Pionki[y][x].getBoard() == 2){
             cleanHighlight();
 
-            Pionki[y][x].setAttackmove(22);/*attackmove[y][x] = 22;*/
+            Pionki[y][x].setAttackmove(22);
             if(y-1>=0){
-                if ( x+1 <=7 && Pionki[y-1][x+1].getBoard()/*board[y-1][x+1]*/ == 3)
-                    Pionki[y-1][x+1].setAttackmove(2);/*attackmove[y-1][x+1] = 2;*/
-                if (x-1 >=0 && Pionki[y-1][x-1].getBoard()/*board[y-1][x-1]*/ == 3)
-                    Pionki[y-1][x-1].setAttackmove(2);/*attackmove[y-1][x-1] = 2;*/
+                if ( x+1 <=7 && Pionki[y-1][x+1].getBoard() == 3)
+                    Pionki[y-1][x+1].setAttackmove(2);
+                if (x-1 >=0 && Pionki[y-1][x-1].getBoard() == 3)
+                    Pionki[y-1][x-1].setAttackmove(2);
             }
 
             if(y-2 >=0){
-                if ( x+2 <=7 && Pionki[y-2][x+2].getBoard()/*board[y-2][x+2]*/ == 3 && (Pionki[y-1][x+1].getBoard()/*board[y-1][x+1]*/ == 1 || Pionki[y-1][x+1].getBoard()/*board[y-1][x+1]*/ == 111)) {
-                    Pionki[y-2][x+2].setAttackmove(2);/*attackmove[y - 2][x + 2] = 2;*/
-                    Pionki[y-1][x+1].setAttackmove(44);/*attackmove[y - 1][x+1] = 44;*/
+                if ( x+2 <=7 && Pionki[y-2][x+2].getBoard() == 3 && (Pionki[y-1][x+1].getBoard() == 1 || Pionki[y-1][x+1].getBoard() == 111)) {
+                    Pionki[y-2][x+2].setAttackmove(2);
+                    Pionki[y-1][x+1].setAttackmove(44);
                 }
-                if (x-2 >=0 && Pionki[y-2][x-2].getBoard()/*board[y-2][x-2]*/ == 3 && (Pionki[y-1][x-1].getBoard()/*board[y-1][x-1]*/ == 1 || Pionki[y-1][x-1].getBoard()/*board[y-1][x-1]*/ == 111)) {
-                    Pionki[y-2][x-2].setAttackmove(2);/*attackmove[y - 2][x - 2] = 2;*/
-                    Pionki[y-1][x-1].setAttackmove(44);/*attackmove[y - 1][x - 1] = 44;*/
+                if (x-2 >=0 && Pionki[y-2][x-2].getBoard() == 3 && (Pionki[y-1][x-1].getBoard() == 1 || Pionki[y-1][x-1].getBoard() == 111)) {
+                    Pionki[y-2][x-2].setAttackmove(2);
+                    Pionki[y-1][x-1].setAttackmove(44);
                 }
             }
         }
         else if(Pionki[y][x].getBoard() == 222){
             cleanHighlight();
 
-            Pionki[y][x].setAttackmove(222);/*attackmove[y][x] = 11;*/
+            Pionki[y][x].setAttackmove(222);
             if (y + 1 <= 7) {
-                if (x + 1 <= 7 && Pionki[y+1][x+1].getBoard()/*board[y+1][x+1]*/ == 3)
-                    Pionki[y + 1][x + 1].setAttackmove(2);/*attackmove[y + 1][x + 1] = 1;*/
-                if (x - 1 >= 0 && Pionki[y + 1][x - 1].getBoard()/*board[y+1][x-1]*/ == 3)
-                    Pionki[y + 1][x - 1].setAttackmove(2);/*attackmove[y + 1][x - 1] = 1;*/
+                if (x + 1 <= 7 && Pionki[y+1][x+1].getBoard() == 3)
+                    Pionki[y + 1][x + 1].setAttackmove(2);
+                if (x - 1 >= 0 && Pionki[y + 1][x - 1].getBoard() == 3)
+                    Pionki[y + 1][x - 1].setAttackmove(2);
             }
 
             if(y-1>=0){
-                if ( x+1 <=7 && Pionki[y-1][x+1].getBoard()/*board[y-1][x+1]*/ == 3)
-                    Pionki[y-1][x+1].setAttackmove(2);/*attackmove[y-1][x+1] = 2;*/
-                if (x-1 >=0 && Pionki[y-1][x-1].getBoard()/*board[y-1][x-1]*/ == 3)
-                    Pionki[y-1][x-1].setAttackmove(2);/*attackmove[y-1][x-1] = 2;*/
+                if ( x+1 <=7 && Pionki[y-1][x+1].getBoard() == 3)
+                    Pionki[y-1][x+1].setAttackmove(2);
+                if (x-1 >=0 && Pionki[y-1][x-1].getBoard() == 3)
+                    Pionki[y-1][x-1].setAttackmove(2);
             }
 
             if(y-2 >=0){
-                if ( x+2 <=7 && Pionki[y-2][x+2].getBoard()/*board[y-2][x+2]*/ == 3 && (Pionki[y-1][x+1].getBoard()/*board[y-1][x+1]*/ == 1 || Pionki[y-1][x+1].getBoard()/*board[y-1][x+1]*/ == 111)) {
-                    Pionki[y-2][x+2].setAttackmove(2);/*attackmove[y - 2][x + 2] = 2;*/
-                    Pionki[y-1][x+1].setAttackmove(44);/*attackmove[y - 1][x+1] = 44;*/
+                if ( x+2 <=7 && Pionki[y-2][x+2].getBoard() == 3 && (Pionki[y-1][x+1].getBoard() == 1 || Pionki[y-1][x+1].getBoard() == 111)) {
+                    Pionki[y-2][x+2].setAttackmove(2);
+                    Pionki[y-1][x+1].setAttackmove(44);
                 }
-                if (x-2 >=0 && Pionki[y-2][x-2].getBoard()/*board[y-2][x-2]*/ == 3 && (Pionki[y-1][x-1].getBoard()/*board[y-1][x-1]*/ == 1 ||Pionki[y-1][x-1].getBoard()/*board[y-1][x+1]*/ == 111)) {
-                    Pionki[y-2][x-2].setAttackmove(2);/*attackmove[y - 2][x - 2] = 2;*/
-                    Pionki[y-1][x-1].setAttackmove(44);/*attackmove[y - 1][x - 1] = 44;*/
+                if (x-2 >=0 && Pionki[y-2][x-2].getBoard() == 3 && (Pionki[y-1][x-1].getBoard() == 1 ||Pionki[y-1][x-1].getBoard() == 111)) {
+                    Pionki[y-2][x-2].setAttackmove(2);
+                    Pionki[y-1][x-1].setAttackmove(44);
                 }
             }
 
             if(y+2 <=7){
-                if ( x+2 <=7 && Pionki[y+2][x+2].getBoard()/*board[y+2][x+2]*/ == 3 && (Pionki[y+1][x+1].getBoard()/*board[y+1][x+1]*/ == 1 || Pionki[y+1][x+1].getBoard()/*board[y+1][x+1]*/ == 111)) {
-                    Pionki[y + 2][x + 2].setAttackmove(2);/*attackmove[y + 2][x + 2] = 1;*/
-                    Pionki[y + 1][x + 1].setAttackmove(44);/*attackmove[y + 1][x+1] = 55;*/
+                if ( x+2 <=7 && Pionki[y+2][x+2].getBoard() == 3 && (Pionki[y+1][x+1].getBoard() == 1 || Pionki[y+1][x+1].getBoard() == 111)) {
+                    Pionki[y + 2][x + 2].setAttackmove(2);
+                    Pionki[y + 1][x + 1].setAttackmove(44);
                 }
-                if (x-2 >=0 && Pionki[y+2][x-2].getBoard()/*board[y+2][x-2]*/ == 3 && (Pionki[y+1][x-1].getBoard()/*board[y+1][x-1]*/ == 1 || Pionki[y+1][x-1].getBoard()/*board[y+1][x-1]*/ == 111)) {
-                    Pionki[y+2][x-2].setAttackmove(2);/*attackmove[y + 2][x - 2] = 1;*/
-                    Pionki[y+1][x-1].setAttackmove(44);/*attackmove[y + 1][x - 1] = 55;*/
+                if (x-2 >=0 && Pionki[y+2][x-2].getBoard() == 3 && (Pionki[y+1][x-1].getBoard() == 1 || Pionki[y+1][x-1].getBoard() == 111)) {
+                    Pionki[y+2][x-2].setAttackmove(2);
+                    Pionki[y+1][x-1].setAttackmove(44);
                 }
             }
         }
-        else if(Pionki[y][x].getAttackmove()/*attackmove[y][x]*/ == 2){
+        else if(Pionki[y][x].getAttackmove() == 2){
             for(int yy=0; yy<8; yy++)
                 for(int xx=0; xx<8; xx++){
-                    if(Pionki[yy][xx].getAttackmove()/*attackmove[yy][xx]*/ == 22){
-                        Pionki[y][x].setBoard(2);/*board[y][x]=2;*/
+                    if(Pionki[yy][xx].getAttackmove() == 22){
+                        Pionki[y][x].setBoard(2);
                         if(y == 0)
-                            Pionki[y][x].setBoard(222);/*board[y][x]=222;*/
-                        Pionki[yy][xx].setBoard(3);/*board[yy][xx]=3;*/
-                        Pionki[yy][xx].setAttackmove(0);/*attackmove[yy][xx]=0;*/
+                            Pionki[y][x].setBoard(222);
+                        Pionki[yy][xx].setBoard(3);
+                        Pionki[yy][xx].setAttackmove(0);
 
-                        if(y-1 >=0 && x-1 >=0 && Pionki[y-1][x-1].getAttackmove()/*attackmove[y-1][x-1]*/ == 44){
-                            Pionki[y-1][x-1].setBoard(3);/*board[y-1][x-1] = 3;*/
-                            Pionki[y-1][x-1].setAttackmove(0);/*attackmove[y-1][x-1]=0;*/
+                        if(y-1 >=0 && x-1 >=0 && Pionki[y-1][x-1].getAttackmove() == 44){
+                            Pionki[y-1][x-1].setBoard(3);
+                            Pionki[y-1][x-1].setAttackmove(0);
                             left2--;
-                        }else if(y-1 >=0 && x+1 <=7 && Pionki[y-1][x+1].getAttackmove()/*attackmove[y-1][x+1]*/ == 44){
-                            Pionki[y-1][x+1].setBoard(3);/*board[y-1][x+1] = 3;*/
-                            Pionki[y-1][x+1].setAttackmove(0);/*attackmove[y-1][x+1]=0;*/
+                        }else if(y-1 >=0 && x+1 <=7 && Pionki[y-1][x+1].getAttackmove() == 44){
+                            Pionki[y-1][x+1].setBoard(3);
+                            Pionki[y-1][x+1].setAttackmove(0);
                             left2--;
-                        }else if(y+1 <=7 && x-1 >=0 && Pionki[y+1][x-1].getAttackmove()/*attackmove[y+1][x-1]*/ == 44){
-                            Pionki[y+1][x-1].setBoard(3);/*board[y+1][x-1] = 3;*/
-                            Pionki[y+1][x-1].setAttackmove(0);/*attackmove[y+1][x-1]=0;*/
+                        }else if(y+1 <=7 && x-1 >=0 && Pionki[y+1][x-1].getAttackmove() == 44){
+                            Pionki[y+1][x-1].setBoard(3);
+                            Pionki[y+1][x-1].setAttackmove(0);
                             left2--;
-                        }else if(y+1 <=7 && x+1 <=7 && Pionki[y+1][x+1].getAttackmove()/*attackmove[y+1][x+1]*/ == 44){
-                            Pionki[y+1][x+1].setBoard(3);/*board[y+1][x+1] = 3;*/
-                            Pionki[y+1][x+1].setAttackmove(0);/*attackmove[y+1][x+1]=0;*/
+                        }else if(y+1 <=7 && x+1 <=7 && Pionki[y+1][x+1].getAttackmove() == 44){
+                            Pionki[y+1][x+1].setBoard(3);
+                            Pionki[y+1][x+1].setAttackmove(0);
                             left2--;
                         }
                         mademove2=true;
                     }
-                    if(Pionki[yy][xx].getAttackmove()/*attackmove[yy][xx]*/ == 222){
-                        Pionki[y][x].setBoard(222);/*board[y][x]=2;*/
-                        Pionki[yy][xx].setBoard(3);/*board[yy][xx]=3;*/
-                        Pionki[yy][xx].setAttackmove(0);/*attackmove[yy][xx]=0;*/
+                    if(Pionki[yy][xx].getAttackmove() == 222){
+                        Pionki[y][x].setBoard(222);
+                        Pionki[yy][xx].setBoard(3);
+                        Pionki[yy][xx].setAttackmove(0);
 
-                        if(y-1 >=0 && x-1 >=0 && Pionki[y-1][x-1].getAttackmove()/*attackmove[y-1][x-1]*/ == 44){
-                            Pionki[y-1][x-1].setBoard(3);/*board[y-1][x-1] = 3;*/
-                            Pionki[y-1][x-1].setAttackmove(0);/*attackmove[y-1][x-1]=0;*/
+                        if(y-1 >=0 && x-1 >=0 && Pionki[y-1][x-1].getAttackmove() == 44){
+                            Pionki[y-1][x-1].setBoard(3);
+                            Pionki[y-1][x-1].setAttackmove(0);
                             left2--;
-                        }else if(y-1 >=0 && x+1 <=7 && Pionki[y-1][x+1].getAttackmove()/*attackmove[y-1][x+1]*/ == 44){
-                            Pionki[y-1][x+1].setBoard(3);/*board[y-1][x+1] = 3;*/
-                            Pionki[y-1][x+1].setAttackmove(0);/*attackmove[y-1][x+1]=0;*/
+                        }else if(y-1 >=0 && x+1 <=7 && Pionki[y-1][x+1].getAttackmove() == 44){
+                            Pionki[y-1][x+1].setBoard(3);
+                            Pionki[y-1][x+1].setAttackmove(0);
                             left2--;
-                        }else if(y+1 <=7 && x-1 >=0 && Pionki[y+1][x-1].getAttackmove()/*attackmove[y+1][x-1]*/ == 44){
-                            Pionki[y+1][x-1].setBoard(3);/*board[y+1][x-1] = 3;*/
-                            Pionki[y+1][x-1].setAttackmove(0);/*attackmove[y+1][x-1]=0;*/
+                        }else if(y+1 <=7 && x-1 >=0 && Pionki[y+1][x-1].getAttackmove() == 44){
+                            Pionki[y+1][x-1].setBoard(3);
+                            Pionki[y+1][x-1].setAttackmove(0);
                             left2--;
-                        }else if(y+1 <=7 && x+1 <=7 && Pionki[y+1][x+1].getAttackmove()/*attackmove[y+1][x+1]*/ == 44){
-                            Pionki[y+1][x+1].setBoard(3);/*board[y+1][x+1] = 3;*/
-                            Pionki[y+1][x+1].setAttackmove(0);/*attackmove[y+1][x+1]=0;*/
+                        }else if(y+1 <=7 && x+1 <=7 && Pionki[y+1][x+1].getAttackmove() == 44){
+                            Pionki[y+1][x+1].setBoard(3);
+                            Pionki[y+1][x+1].setAttackmove(0);
                             left2--;
                         }
                         mademove2=true;
@@ -413,7 +413,7 @@ public class Board extends JPanel{
     public void cleanHighlight(){
         for(int yy = 0; yy <8; yy++) {
             for (int xx = 0; xx < 8; xx++) {
-                Pionki[yy][xx].setAttackmove(0);/*attackmove[yy][xx] = 0;*/
+                Pionki[yy][xx].setAttackmove(0);
             }
         }
     }
@@ -443,7 +443,6 @@ public class Board extends JPanel{
             int x = (e.getX()/80);
             int y = (e.getY()/80);
 
-            //cleanHighlight();
             if(player2.isTurn(turn)) {
                 //Player two move
                     move2(x, y);
