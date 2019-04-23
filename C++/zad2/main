@@ -1,0 +1,46 @@
+#include "definitions.hpp"
+
+
+int main ()
+{
+	wektor v2(1, -2);
+	std::cout << v2.dx << std::endl << v2.dy << std::endl << std::endl;
+	
+	wektor v3(v2);
+	wektor v4 = v2;
+	
+	std::cout << v3.dx << std::endl << v3.dy << std::endl << std::endl;
+	std::cout << v4.dx << std::endl << v4.dy << std::endl << std::endl;
+	
+	punkt p(0,-1);
+	punkt pp(p,v2);
+	
+	std::cout << pp.x << std::endl << pp.y << std::endl << std::endl;
+	punkt pp1(0,0);
+	punkt pp2(2,4);
+	//prosta p1( pp1, pp2);
+	prosta p0(-2, 1, -1);
+	prosta p1(p0, v2);
+	
+	std::cout << p1.getA() << std::endl << p1.getB() << std::endl << p1.getC() << std::endl << std::endl;
+	
+	std::cout << p0.czy_prostopadla(v2) << std::endl;
+	std::cout << p0.czy_rownolegla(v2) << std::endl;
+	std::cout << p0.czy_lezy(p) << std::endl;
+	
+	wektor *vv;
+	vv=dodajwektory(v2,v3);
+	std::cout << v2.dx << v2.dy << std::endl << v3.dx <<v3.dy << std::endl << vv->dx << vv->dy << std::endl;
+	
+	prosta pr1(1, 2,1);
+	prosta pr2(1, 1,2);
+	
+	std::cout << czyProwno(pr1,pr2) << std::endl;
+	
+	prosta ppp1(-0.5, 1, 1);
+	prosta ppp2(2, 2, 2);
+	
+	std::cout << czyPprost(ppp1,ppp2) << std::endl;
+	
+	return 0;
+}
