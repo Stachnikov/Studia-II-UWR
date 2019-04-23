@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1519912555 source:c:\users\dell\desktop\2 semestr\po\1.2\1.2.c
+	"def.h"
+
+1519911652 c:\users\dell\desktop\2 semestr\po\1.2\def.h
+	<stdio.h>
+	<stdlib.h>
+
+1519912149 source:c:\users\dell\desktop\2 semestr\po\1.2\main.c
+	"def.h"
+

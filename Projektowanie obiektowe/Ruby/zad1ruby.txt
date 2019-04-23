@@ -1,0 +1,82 @@
+class Fixnum
+  def czynniki
+    tab = [1]
+    for i in 2..self do
+      if self % i == 0
+        tab << i;
+      end
+    end
+    return tab
+  end
+  
+  def ack(y)
+    if self == 0
+      wynik = y + 1
+    elsif y == 0 
+      wynik = (self - 1).ack(1)
+    else
+      wynik = (self - 1).ack(self.ack(y-1))
+    end
+    return wynik
+  end
+  
+def doskonala
+  if self < 1
+    return false
+  else
+    suma = 0
+    i = 1
+    while i < self
+      if self % i == 0
+        suma = suma + i
+        i = i + 1
+      else
+        i = i + 1
+      end
+      end
+      if suma == self
+        return true
+      else
+        return false
+      end
+  end
+end
+
+def slownie
+  slowo = " "
+  pom = self
+  while pom > 0
+    case pom%10
+    when 1
+      slowo = ("jeden " + slowo)
+    when 2
+      slowo = ("dwa " + slowo)
+    when 3
+      slowo = ("trzy " + slowo)
+    when 4
+      slowo = ("cztery " + slowo)
+    when 5
+      slowo = ("piec " + slowo)
+    when 6
+      slowo = ("szesc " + slowo)
+    when 7
+      slowo =("siedem " + slowo)
+    when 8
+      slowo = ("osiem " + slowo)
+    when 9
+      slowo = ("dziewiec " + slowo)
+    when 0
+      slowo = ("zero " + slowo)
+
+    end
+    pom = pom/10
+  end
+  return slowo
+end
+
+end
+
+#12345678.slownie
+#496.doskonala
+#2.ack(1)
+#20.czynniki

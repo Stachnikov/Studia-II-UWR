@@ -1,0 +1,10 @@
+C:\Users\Dell\Desktop\2 SEMESTR\PO\zad2_2\zad2_2\bin\Release\netcoreapp2.0\zad2_2.deps.json
+C:\Users\Dell\Desktop\2 SEMESTR\PO\zad2_2\zad2_2\bin\Release\netcoreapp2.0\zad2_2.runtimeconfig.json
+C:\Users\Dell\Desktop\2 SEMESTR\PO\zad2_2\zad2_2\bin\Release\netcoreapp2.0\zad2_2.runtimeconfig.dev.json
+C:\Users\Dell\Desktop\2 SEMESTR\PO\zad2_2\zad2_2\bin\Release\netcoreapp2.0\zad2_2.dll
+C:\Users\Dell\Desktop\2 SEMESTR\PO\zad2_2\zad2_2\bin\Release\netcoreapp2.0\zad2_2.pdb
+C:\Users\Dell\Desktop\2 SEMESTR\PO\zad2_2\zad2_2\obj\Release\netcoreapp2.0\zad2_2.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\2 SEMESTR\PO\zad2_2\zad2_2\obj\Release\netcoreapp2.0\zad2_2.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\2 SEMESTR\PO\zad2_2\zad2_2\obj\Release\netcoreapp2.0\zad2_2.AssemblyInfo.cs
+C:\Users\Dell\Desktop\2 SEMESTR\PO\zad2_2\zad2_2\obj\Release\netcoreapp2.0\zad2_2.dll
+C:\Users\Dell\Desktop\2 SEMESTR\PO\zad2_2\zad2_2\obj\Release\netcoreapp2.0\zad2_2.pdb

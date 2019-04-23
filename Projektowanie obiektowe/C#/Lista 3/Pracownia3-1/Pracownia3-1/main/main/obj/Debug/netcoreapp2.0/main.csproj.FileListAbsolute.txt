@@ -1,0 +1,14 @@
+C:\Users\Dell\Desktop\2 SEMESTR\PO\Pracownia3-1\Pracownia3-1\main\main\bin\Debug\netcoreapp2.0\main.deps.json
+C:\Users\Dell\Desktop\2 SEMESTR\PO\Pracownia3-1\Pracownia3-1\main\main\bin\Debug\netcoreapp2.0\main.runtimeconfig.json
+C:\Users\Dell\Desktop\2 SEMESTR\PO\Pracownia3-1\Pracownia3-1\main\main\bin\Debug\netcoreapp2.0\main.runtimeconfig.dev.json
+C:\Users\Dell\Desktop\2 SEMESTR\PO\Pracownia3-1\Pracownia3-1\main\main\bin\Debug\netcoreapp2.0\main.dll
+C:\Users\Dell\Desktop\2 SEMESTR\PO\Pracownia3-1\Pracownia3-1\main\main\bin\Debug\netcoreapp2.0\main.pdb
+C:\Users\Dell\Desktop\2 SEMESTR\PO\Pracownia3-1\Pracownia3-1\main\main\bin\Debug\netcoreapp2.0\Pracownia3-1.dll
+C:\Users\Dell\Desktop\2 SEMESTR\PO\Pracownia3-1\Pracownia3-1\main\main\bin\Debug\netcoreapp2.0\Pracownia3-1.pdb
+C:\Users\Dell\Desktop\2 SEMESTR\PO\Pracownia3-1\Pracownia3-1\main\main\obj\Debug\netcoreapp2.0\main.csprojResolveAssemblyReference.cache
+C:\Users\Dell\Desktop\2 SEMESTR\PO\Pracownia3-1\Pracownia3-1\main\main\obj\Debug\netcoreapp2.0\main.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\2 SEMESTR\PO\Pracownia3-1\Pracownia3-1\main\main\obj\Debug\netcoreapp2.0\main.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\2 SEMESTR\PO\Pracownia3-1\Pracownia3-1\main\main\obj\Debug\netcoreapp2.0\main.AssemblyInfo.cs
+C:\Users\Dell\Desktop\2 SEMESTR\PO\Pracownia3-1\Pracownia3-1\main\main\obj\Debug\netcoreapp2.0\main.csproj.CopyComplete
+C:\Users\Dell\Desktop\2 SEMESTR\PO\Pracownia3-1\Pracownia3-1\main\main\obj\Debug\netcoreapp2.0\main.dll
+C:\Users\Dell\Desktop\2 SEMESTR\PO\Pracownia3-1\Pracownia3-1\main\main\obj\Debug\netcoreapp2.0\main.pdb
