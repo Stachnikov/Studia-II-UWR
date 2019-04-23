@@ -1,0 +1,8 @@
+def palindrome?(napis)
+  napis.downcase.scan(/\w/) == napis.downcase.scan(/\w/).reverse
+end
+
+palindrome?("A man, a plan, a canal -- Panama") #=> true
+palindrome?("Madam, I'm Adam!") # => true
+palindrome?("Abracadabra") # => false
+palindrome?("") # => true 
